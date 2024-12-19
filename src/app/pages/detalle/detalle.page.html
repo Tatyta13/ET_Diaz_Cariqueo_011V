@@ -1,0 +1,65 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="regresar()">
+        
+        Regresar
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Detalle</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Id: {{post?.id}}</ion-card-subtitle>
+      <ion-card-subtitle>Hora: {{post?.hora}}</ion-card-subtitle>
+      <ion-card-subtitle>Profesor: {{post?.profesor}}</ion-card-subtitle>
+      <ion-card-title>Clase: {{post?.Clase}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>{{post?.body}}</p>
+    </ion-card-content>
+  </ion-card>
+<!--
+  <div style="text-align: center; margin-top: 30px;">
+    <ion-button shape="round" color="warning">
+      Justificar
+    </ion-button>
+    
+    <ion-button (click)="generarQr()" shape="round" color="success">
+      Generar QR
+    </ion-button>
+  
+    <ion-card class="ion-text-center">
+      <ion-card-content>
+        <qrcode [qrdata]=qrdata [width]="256" [errorCorrectionLevel]="'M'"></qrcode>
+      </ion-card-content>
+    </ion-card>
+  </div>-->
+  
+  <div style="text-align: center; margin-top: 30px;">
+
+    <ion-button (click)="generarQr()" shape="round" color="success">
+      Generar QR
+    </ion-button>
+  
+    <ion-card class="ion-text-center">
+      <ion-card-content>
+        <qrcode [qrdata]="qrdata" [width]="256" [errorCorrectionLevel]="'M'"></qrcode>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <div style="text-align: center; margin-top: 30px;">
+
+    <ion-button [routerLink]="['/justificar']" shape="round" color="success">
+      Justificar Inasistencia
+    </ion-button>
+  
+    
+  </div>
+  
+
+</ion-content>

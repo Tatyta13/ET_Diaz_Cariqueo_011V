@@ -1,0 +1,38 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="end">
+      <ion-button (click)="mostrarMenu()">
+        <ion-icon slot="end" name="menu-outline" color="dark" size="large"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>
+      Home
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+   
+  <div style="text-align: center;">
+    <ion-button (click)="cargarApi()" shape="round" color="success" style="margin-top: 30px;">
+      Api Posts
+    </ion-button>
+  </div>
+
+  <ion-card *ngFor="let p of posteos">
+    <ion-card-header>
+      <ion-card-subtitle>Id: {{p.id}}</ion-card-subtitle>
+      <ion-card-title>Title: {{p.title}}</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <p>
+        {{p.body}}
+      </p>
+    </ion-card-content>
+
+  </ion-card>
+
+
+  <app-explore-container name="Tab 1 page"></app-explore-container>
+</ion-content>

@@ -1,0 +1,32 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button (click)="mostrarMenu()">
+        <ion-icon slot="end" name="menu-outline" id="titulo"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title id="titulo" >Menu Principal</ion-title>
+  </ion-toolbar> 
+</ion-header>
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-img src="assets/fotos/Logo_final.png"></ion-img>
+  </ion-card>
+  <div>
+    <ion-slides pager="true" [options]="slideOpts">
+      <ion-slide>
+        <img src="assets/alumnos.jpg" alt="Slide 1" />
+        <h2>Bienvenido al Menú</h2>
+      </ion-slide>
+      <ion-slide>
+        <img src="assets/duoc.jpg" alt="Slide 2" />
+        <h2>Explora tus clases</h2>
+      </ion-slide>
+      <ion-slide>
+        <img src="assets/it.jpg" alt="Slide 3" />
+        <h2>Actualiza tu perfil</h2>
+      </ion-slide>
+    </ion-slides>
+  </div>
+</ion-content>
+

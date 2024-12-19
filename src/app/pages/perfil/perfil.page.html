@@ -1,0 +1,67 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button 
+      defaultHref="/"
+      text=""
+      color="dark">
+      </ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button [routerLink]="['/menu']">
+        <ion-icon 
+          slot="end" 
+          name="home-outline" 
+          id="titulo"
+          color="dark">
+        </ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Perfil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content class="ion-padding">
+  <form [formGroup]="perfilForm" (ngSubmit)="guardarPerfil()">
+    <ion-item>
+      <ion-label position="floating">Nombre de usuario</ion-label>
+      <ion-input type="text" formControlName="username"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Correo Electrónico</ion-label>
+      <ion-input type="email" formControlName="email"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input type="password" formControlName="password"></ion-input>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-label>Foto de perfil</ion-label>
+      <input type="file" accept="image/*" (change)="seleccionarImagen($event)" />
+    </ion-item>
+
+    <!-- Mostrar la imagen de perfil -->
+    <div *ngIf="imagenPerfil">
+      <ion-img [src]="imagenPerfil" class="img-preview"></ion-img>
+    </div>
+
+    <ion-button expand="block" type="submit" [disabled]="perfilForm.invalid">
+      Guardar Cambios
+    </ion-button>
+  </form>
+</ion-content>
+
+<style>
+  .img-preview {
+    width: 150px;
+    height: 150px;
+    margin: 10px auto;
+    display: block;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+</style>

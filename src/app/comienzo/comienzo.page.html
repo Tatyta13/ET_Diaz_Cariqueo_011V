@@ -1,0 +1,57 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>comienzo</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>MyTabs</ion-card-subtitle>
+      <ion-card-title>Login</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+       <ion-item>
+        <ion-label position="stacked">Email: </ion-label>
+        <ion-input type="email" placeholder="Ingrese correo" name="correo" [(ngModel)]="correo"></ion-input>
+       </ion-item>
+
+       <ion-item>
+        <ion-label position="stacked">Password: </ion-label>
+        <ion-input type="password" placeholder="Ingrese password" name="pass" [(ngModel)]="pass"></ion-input>
+       </ion-item>
+    </ion-card-content>
+
+    <div style="text-align: center;">
+      <ion-button (click)="login()" fill="solid" shape="round" color="medium" class="boton">
+        Login
+      </ion-button>
+    </div>
+
+  </ion-card>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="primary">
+    <ion-title>MyTabs 2024</ion-title>
+    <ion-buttons slot="end">
+
+      <ion-button fill="clear">
+        <ion-icon name="logo-instagram" color="dark"></ion-icon>
+      </ion-button>
+
+      <ion-button fill="clear">
+        <ion-icon name="logo-github" color="dark"></ion-icon>
+      </ion-button>
+
+      <ion-button fill="clear">
+        <ion-icon name="logo-angular" color="dark"></ion-icon>
+      </ion-button>
+
+
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-footer>

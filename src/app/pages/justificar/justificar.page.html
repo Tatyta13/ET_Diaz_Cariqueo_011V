@@ -1,0 +1,45 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button 
+      defaultHref="/"
+      text=""
+      color="dark">
+      </ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button [routerLink]="['/menu']">
+        <ion-icon 
+          slot="end" 
+          name="home-outline" 
+          id="titulo"
+          color="dark">
+        </ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Justificación</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="justificacionForm" (ngSubmit)="guardarJustificacion()">
+    <ion-item>
+      <ion-label>Clase</ion-label>
+      <ion-select formControlName="claseId">
+        <ion-select-option *ngFor="let clase of clases" [value]="clase.id">
+          {{ clase.Clase }}
+        </ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Motivo de Inasistencia</ion-label>
+      <ion-textarea formControlName="motivo"></ion-textarea>
+    </ion-item>
+
+    <ion-button expand="full" type="submit" [disabled]="justificacionForm.invalid">
+      Guardar Justificación
+    </ion-button>
+  </form>
+</ion-content>
+
