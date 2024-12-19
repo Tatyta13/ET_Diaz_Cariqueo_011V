@@ -1,0 +1,73 @@
+{
+  "usarios": [
+    {
+      "id": "1",
+      "username": "usuario1",
+      "password": "duoc1312",
+      "email": "usuario1@gmail.com",
+      "isactive": true
+    },
+    {
+      "id": "2",
+      "username": "usuario2",
+      "password": "duoc7777",
+      "email": "usuario2@gmail.com",
+      "isactive": true
+    },
+    {
+      "id": "3672",
+      "username": "usuario3",
+      "email": "usuario3@duocuc.cl",
+      "password": "duoc1213",
+      "isactive": true
+    },
+    {
+      "id": "9f5e",
+      "username": "usuario13",
+      "email": "joako@gamil",
+      "password": "joako123",
+      "isactive": true
+    }
+  ],
+  "clases": [
+    {
+      "id": "1",
+      "Clase": "Arquitectura",
+      "hora": "Miercoles: 7:00 pm - 8:20 pm",
+      "profesor": "Gonzalo Herrera"
+    },
+    {
+      "id": "2",
+      "Clase": "Programación de aplicaiones Moviles",
+      "hora": "Miercoles: 8:30 pm - 22:30",
+      "profesor": "Viviana"
+    },
+    {
+      "id": "3",
+      "Clase": "Calidad de Software",
+      "hora": "Jueves: 8:2000 pm - 9:50 pm",
+      "profesor": "Jorge Leopoldo"
+    },
+    {
+      "id": "4",
+      "Clase": "Etica",
+      "hora": "Sabado: 8:30 am - 10:00 am",
+      "profesor": "Jorge"
+    }
+  ],
+  "qrdata": [],
+  "justificaciones": [
+    {
+      "id": "9cc0",
+      "claseId": "1",
+      "motivo": "Estoy en el hospital",
+      "fecha": "2024-11-25T21:21:46.685Z"
+    },
+    {
+      "id": "3669",
+      "claseId": "1",
+      "motivo": "me enferme",
+      "fecha": "2024-11-25T23:32:18.462Z"
+    }
+  ]
+}
